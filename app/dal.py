@@ -13,7 +13,7 @@ def convert_objectId_to_string_of_all_docs(docs):
 def get_engineering_high_salary_employees(conn):
     data = []
     for item in conn.find({"job_role.department":"Engineering","salary":{"$gt":65000}},{"_id":0,"employee_id":1,"name":1,"salary":1}):
-        data.append(list(convert_objectId_to_string(item)))
+        data.append(convert_objectId_to_string(item))
     return data
 
 

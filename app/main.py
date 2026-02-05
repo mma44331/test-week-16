@@ -14,7 +14,7 @@ app.include_router(route)
 
 @app.on_event("startup")
 def create():
-    mongo_uri = getenv("MONGO_URL", "mongodb://mongodb-gerstnir-dev.apps.rm2.thpm.p1.openshiftapps.com:27017/")
+    mongo_uri = getenv("MONGO_URL", "mongodb://localhost:27017/")
     mongo_db = getenv("MONGO_DB", "mymongodb")
     mongo_collection = getenv("MONGO_COLLECTION", "employee_data_advanced")
     file_path = './employee_data_advanced.json'
