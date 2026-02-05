@@ -16,7 +16,7 @@ spec:
     spec:
       containers:
       - name: api
-        image: mma44331/mongo_query:v1
+        image: mma44331/mongo_query:v2
         ports:
         - containerPort: 8000
         env:
